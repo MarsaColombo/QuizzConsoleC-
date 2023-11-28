@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +8,6 @@ class QuizProgram
 {
     static void Main()
     {
-        // Charger les données des quizzes depuis un fichier JSON
         string jsonFilePath = "quizzes.json";
         QuizData? quizData = LoadQuizzesFromJson(jsonFilePath);
 
@@ -21,10 +19,26 @@ class QuizProgram
 
         Console.WriteLine($"Nombre de catégories chargées : {quizData.Categories.Count}");
 
-        // Welcoming !
         Console.WriteLine("Bienvenue dans le programme de quiz !");
 
-        // Afficher les catégories disponibles
+        Console.WriteLine("Choisissez une option :");
+        Console.WriteLine("1. Sélectionner une catégorie spécifique");
+        Console.WriteLine("2. Choisir une catégorie au hasard");
+
+        int choice = GetReponse(2);
+
+        if (choice == 1)
+        {
+            SelectCategory(quizData);
+        }
+        else if (choice == 2)
+        {
+            RandomCategory(quizData);
+        }
+    }
+
+    static void SelectCategory(QuizData quizData)
+    {
         Console.WriteLine("Choisissez une catégorie :");
         for (int i = 0; i < quizData.Categories.Count; i++)
         {
@@ -33,22 +47,38 @@ class QuizProgram
 
         int categoryChoice = GetReponse(quizData.Categories.Count);
 
-        // Vérifier si la catégorie choisie est valide
         if (categoryChoice < 1 || categoryChoice > quizData.Categories.Count)
         {
             Console.WriteLine("Catégorie invalide.");
             return;
         }
 
-        // Récupérer les questions, options et réponses correctes pour la catégorie choisie
-        var currentCategory = quizData.Categories[categoryChoice - 1];
+        PlayQuiz(quizData.Categories[categoryChoice - 1]);
+    }
 
-        string? categoryName = currentCategory?.Name;
-        string[]? questions = currentCategory?.Questions;
-        string[][]? options = currentCategory?.Options;
-        int[]? correctAnswers = currentCategory?.CorrectAnswers;
+    static void RandomCategory(QuizData quizData)
+    {
+        Random random = new Random();
+        int randomIndex = random.Next(0, quizData.Categories.Count);
 
-        // Créer un tableau pour stocker les réponses correctes
+        Console.WriteLine($"Catégorie choisie au hasard : {quizData.Categories[randomIndex]?.Name}");
+
+        PlayQuiz(quizData.Categories[randomIndex]);
+    }
+
+    static void PlayQuiz(Category? currentCategory)
+    {
+        if (currentCategory == null)
+        {
+            Console.WriteLine("La catégorie est nulle.");
+            return;
+        }
+
+        string? categoryName = currentCategory.Name;
+        string[]? questions = currentCategory.Questions;
+        string[][]? options = currentCategory.Options;
+        int[]? correctAnswers = currentCategory.CorrectAnswers;
+
         if (questions == null || questions.Length == 0 || correctAnswers == null)
         {
             Console.WriteLine("Aucune question n'a été récupérée pour cette catégorie.");
@@ -57,24 +87,19 @@ class QuizProgram
 
         bool[] isAnswerCorrect = new bool[questions.Length];
 
-        // Afficher les questions et obtenir les réponses
         for (int i = 0; i < questions.Length; i++)
         {
             Console.WriteLine(questions[i]);
 
-            // Afficher les options
             for (int j = 0; options != null && j < options[i].Length; j++)
             {
                 Console.WriteLine(options[i][j]);
             }
 
-            // Obtenir la réponse de l'utilisateur
             int userChoice = GetReponse(options?[i]?.Length ?? 0);
 
-            // Vérifier si la réponse est correcte et enregistrer le résultat (True ou False)
             isAnswerCorrect[i] = (correctAnswers?[i] == userChoice);
 
-            // Afficher le message en fonction de la réponse
             if (isAnswerCorrect[i])
             {
                 Console.WriteLine("Correct !\n");
@@ -85,13 +110,9 @@ class QuizProgram
             }
         }
 
-        // Calculer le score
         int score = isAnswerCorrect.Count(c => c);
 
-        // Afficher le score
         Console.WriteLine($"Votre score final pour la catégorie '{categoryName}' : {score} sur {questions.Length}");
-
-        // Ajouter d'autres traitements en fonction des réponses ici
 
         Console.ReadLine();
     }

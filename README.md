@@ -1,75 +1,68 @@
 # Quiz Program
 
-Un programme de quiz en ligne en C#.
+Un programme de quiz en ligne écrit en C#.
 
 ## Installation
 
-1. Clonez le dépôt git : `https://github.com/MarsaColombo/QuizzConsoleC-.git`
+1. Clonez le dépôt Git : `https://github.com/MarsaColombo/QuizzConsoleC-.git`
 2. Ouvrez le projet dans votre IDE favori.
 3. Compilez le projet.
 
-## Contribuer
+## Comment contribuer
 
 Les contributions sont les bienvenues ! Si vous souhaitez apporter des améliorations ou corriger des problèmes, veuillez soumettre une pull request.
-Bien sûr, voici le README converti en format Markdown (`.md`):
 
-```markdown
-# Quiz Program
+## Fonctionnement
 
-This C# program is an interactive quiz application that allows users to test their knowledge in various categories. The application uses a JSON file (`quizzes.json`) to store data about questions, categories, options, and correct answers.
+Ce programme C# est une application de quiz interactive qui permet aux utilisateurs de tester leurs connaissances dans diverses catégories. L'application utilise un fichier JSON (`quizzes.json`) pour stocker des données sur les questions, les catégories, les options et les réponses correctes.
 
-## How It Works
+1. **Chargement des données** :
 
-1. **Data Loading**:
+   - Le programme commence par charger les données du fichier JSON (`quizzes.json`), qui contient différentes catégories de quiz.
+   - Les données sont désérialisées à l'aide de la classe `QuizData`, qui a une liste de catégories (`Category`).
 
-   - The program starts by loading data from the JSON file (`quizzes.json`), which contains various quiz categories.
-   - The data is deserialized using the `QuizData` class, which has a list of categories (`Category`).
+2. **Menu principal** :
 
-2. **Main Menu**:
+   - L'utilisateur est accueilli par le programme, qui affiche le nombre de catégories chargées à partir du fichier JSON.
+   - L'utilisateur peut choisir entre deux options :
+     - **Sélectionner une catégorie spécifique** (choix 1).
+     - **Choisir une catégorie au hasard** (choix 2).
 
-   - The user is greeted by the program, which displays the number of categories loaded from the JSON file.
-   - The user can choose between two options:
-     - **Select a Specific Category** (choice 1).
-     - **Choose a Category at Random** (choice 2).
+3. **Sélection d'une catégorie spécifique** :
 
-3. **Selecting a Specific Category**:
+   - Si l'utilisateur choisit l'option de sélection, le programme affiche la liste des catégories avec les numéros associés.
+   - L'utilisateur peut entrer le numéro de la catégorie qu'il souhaite jouer.
+   - Le quiz pour la catégorie sélectionnée est ensuite lancé.
 
-   - If the user chooses the selection option, the program displays the list of categories with associated numbers.
-   - The user can enter the number of the category they want to play.
-   - The quiz for the selected category is then started.
+4. **Choix d'une catégorie au hasard** :
 
-4. **Choosing a Category at Random**:
+   - Si l'utilisateur choisit l'option au hasard, le programme sélectionne aléatoirement une catégorie parmi celles chargées.
+   - Le programme affiche la catégorie choisie et lance le quiz correspondant.
 
-   - If the user chooses the random option, the program randomly selects a category from those loaded.
-   - The program displays the chosen category and starts the corresponding quiz.
+5. **Jouer au quiz** :
 
-5. **Playing the Quiz**:
+   - Le jeu de quiz est géré par la méthode `PlayQuiz`.
+   - Les questions, options et réponses correctes sont affichées à l'utilisateur.
+   - L'utilisateur entre ses réponses et le programme vérifie si les réponses sont correctes.
+   - À la fin du quiz, le programme affiche le score final de l'utilisateur pour la catégorie.
 
-   - The quiz game is managed by the `PlayQuiz` method.
-   - Questions, options, and correct answers are displayed to the user.
-   - The user enters their responses, and the program checks if the answers are correct.
-   - At the end of the quiz, the program displays the user's final score for the category.
+6. **Méthode de validation des réponses** :
 
-6. **Response Validation Method**:
+   - La méthode `GetReponse` s'assure que la saisie de l'utilisateur est valide en vérifiant qu'il s'agit d'un entier et qu'il est dans la plage des options disponibles.
 
-   - The `GetReponse` method ensures that the user's input is valid by making sure it is an integer and within the range of available options.
+7. **Structure des données** :
 
-7. **Data Structure**:
+   - Les données du quiz sont organisées dans les classes `QuizData` et `Category`.
+   - Chaque catégorie a un nom, des questions, des options et des réponses correctes.
 
-   - Quiz data is organized in the `QuizData` and `Category` classes.
-   - Each category has a name, questions, options, and correct answers.
+8. **Chargement des quiz à partir d'un fichier JSON** :
+   - La méthode `LoadQuizzesFromJson` est responsable du chargement des données à partir du fichier JSON.
 
-8. **Loading Quizzes from a JSON File**:
-   - The `LoadQuizzesFromJson` method is responsible for loading data from the JSON file.
+## Comment utiliser le programme
 
-## How to Use the Program
+1. Assurez-vous d'avoir un fichier JSON valide (`quizzes.json`) contenant des données de quiz.
+2. Compilez et exécutez le programme.
+3. Suivez les instructions pour sélectionner une catégorie spécifique ou en choisir une au hasard.
+4. Répondez aux questions du quiz et découvrez votre score final.
 
-1. Ensure you have a valid JSON file (`quizzes.json`) containing quiz data.
-2. Compile and run the program.
-3. Follow the instructions to select a specific category or choose one at random.
-4. Answer the quiz questions and discover your final score.
-
-Enjoy testing your knowledge with this interactive C# quiz program!
-```
-
-## Licence
+Amusez-vous à tester vos connaissances avec ce programme de quiz interactif en C#!

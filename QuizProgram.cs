@@ -14,7 +14,8 @@ class QuizProgram
         if (quizData == null || quizData.Categories == null)
         {
             Console.WriteLine("Erreur lors du chargement des quizzes depuis le fichier JSON.");
-            return;
+            Console.WriteLine("Le programme sera ferme.");
+            Console.ReadKey();
         }
 
         Console.WriteLine($"Nombre de catégories chargées : {quizData.Categories.Count}");
@@ -119,14 +120,22 @@ class QuizProgram
 
     // Méthode pour obtenir la réponse de l'utilisateur en s'assurant qu'elle est valide
     static int GetReponse(int numberOfOptions)
-    {
-        int choix;
-        do
-        {
-            Console.Write($"Entrez le numéro de votre réponse (1-{numberOfOptions}) : ");
-        } while (!int.TryParse(Console.ReadLine(), out choix) || choix < 1 || choix > numberOfOptions);
+   {
+    int choix;
+    bool isInvalidChoice;
 
-        return choix;
+    do
+    {
+        Console.Write($"Entrez le numéro de votre réponse (1-{numberOfOptions}) : ");
+        isInvalidChoice = !int.TryParse(Console.ReadLine(), out choix) || choix < 1 || choix > numberOfOptions;
+
+        if (isInvalidChoice)
+        {
+            Console.WriteLine("Erreur : Veuillez entrer un chiffre entre 1 et 4.");
+        }
+    } while (isInvalidChoice);
+
+    return choix;
     }
 
     // Classe pour représenter la structure des quizzes

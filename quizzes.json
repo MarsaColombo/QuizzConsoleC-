@@ -1,190 +1,100 @@
 {
   "Categories": [
     {
-      "Name": "Géographie",
+      "Name": "Informatique de base",
       "Questions": [
-        "Quel est le plus grand océan du monde ?",
-        "Quelle est la capitale du Japon ?",
-        "Quel est le plus grand désert du monde en termes de superficie ?",
-        "Quelle est la plus grande île du monde ?",
-        "Quel est le pays le plus peuplé au monde ?",
-        "Quelle est la capitale de la France ?",
-        "Quel est le plus haut sommet d'Afrique ?",
-        "Quel est le plus long fleuve d'Europe ?"
+        "Qu'est-ce qu'un algorithme ?",
+        "Quelle est la différence entre un langage interprété et un langage compilé ?",
+        "Expliquez ce qu'est la mémoire RAM.",
+        "Qu'est-ce qu'une variable en programmation ?",
+        "Quelle est la fonction principale d'un système d'exploitation ?",
+        "Qu'est-ce qu'une boucle en programmation ?",
+        "Quelle est la différence entre une fonction et une méthode ?",
+        "Expliquez ce qu'est un algorithme de tri et donnez un exemple."
       ],
       "Options": [
-        [
-          "1. Océan Atlantique",
-          "2. Océan Indien",
-          "3. Océan Pacifique",
-          "4. Océan Arctique"
-        ],
-        ["1. Tokyo", "2. Pékin", "3. Séoul", "4. Bangkok"],
-        ["1. Sahara", "2. Gobi", "3. Antarctique", "4. Kalahari"],
-        ["1. Groenland", "2. Madagascar", "3. Borneo", "4. Nouvelle-Guinée"],
-        ["1. Chine", "2. Inde", "3. États-Unis", "4. Indonésie"],
-        ["1. Paris", "2. Berlin", "3. Londres", "4. Rome"],
-        [
-          "1. Kilimandjaro",
-          "2. Mont Elbrouz",
-          "3. Mont Everest",
-          "4. Mont McKinley"
-        ],
-        ["1. Volga", "2. Danube", "3. Tamise", "4. Rhin"]
+        ["1. Une boisson énergisante", "2. Une méthode de programmation", "3. Un type de variable", "4. Une structure de données"],
+        ["1. Un langage difficile à apprendre", "2. Un langage utilisé pour les scripts", "3. Un langage converti en langage machine avant l'exécution", "4. Un langage converti en langage machine pendant l'exécution"],
+        ["1. Un type de disque dur", "2. Une unité de stockage volatile utilisée par l'ordinateur", "3. Un périphérique d'entrée", "4. Une imprimante"],
+        ["1. Un nombre fixe", "2. Un emplacement de stockage pour les données", "3. Une instruction conditionnelle", "4. Un opérateur mathématique"],
+        ["1. Gérer les ressources matérielles de l'ordinateur", "2. Exécuter des programmes", "3. Stocker des fichiers", "4. Naviguer sur Internet"],
+        ["1. Un type de variable", "2. Une erreur de programmation", "3. Une instruction de saut", "4. Une structure de contrôle"],
+        ["1. Une fonction est une méthode dans un langage orienté objet", "2. Une méthode est une fonction dans un langage orienté objet", "3. Il n'y a pas de différence", "4. Une fonction est utilisée pour effectuer des calculs, tandis qu'une méthode est utilisée pour effectuer des opérations sur des objets"],
+        ["1. Un algorithme de tri est utilisé pour trier les éléments d'une liste", "2. Un algorithme de tri est utilisé pour mélanger les éléments d'une liste", "3. Un algorithme de tri est utilisé pour rechercher un élément dans une liste", "4. Un algorithme de tri est utilisé pour supprimer les doublons d'une liste"]
       ],
-      "CorrectAnswers": [3, 1, 1, 1, 1, 1, 3, 1]
+      "CorrectAnswers": [2, 3, 2, 4, 1, 6, 1, 1]
     },
     {
-      "Name": "Littérature",
+      "Name": "JavaScript",
       "Questions": [
-        "Qui a écrit la pièce de théâtre 'Roméo et Juliette' ?",
-        "Qui a peint la Joconde ?",
-        "Qui a écrit 'Hamlet' ?",
-        "Quel écrivain français a écrit 'Les Misérables' ?",
-        "Quelle auteure a écrit 'Orgueil et Préjugés' ?",
-        "Quel poète a écrit 'Le Corbeau' ?",
-        "Qui a écrit 'Don Quichotte' ?",
-        "Quelle écrivaine américaine a écrit 'To Kill a Mockingbird' ?"
+        "Qu'est-ce que JavaScript et à quoi sert-il dans le développement web ?",
+        "Comment déclare-t-on une variable en JavaScript ?",
+        "Quelle est la différence entre 'let', 'const' et 'var' pour déclarer une variable ?",
+        "Qu'est-ce qu'une fonction fléchée en JavaScript ?",
+        "Qu'est-ce que le DOM en JavaScript ?",
+        "Comment effectuer une requête AJAX en utilisant JavaScript ?",
+        "Qu'est-ce que la portée des variables en JavaScript ?",
+        "Expliquez ce qu'est le hoisting en JavaScript."
       ],
       "Options": [
-        [
-          "1. William Shakespeare",
-          "2. Victor Hugo",
-          "3. Molière",
-          "4. Anton Tchekhov"
-        ],
-        [
-          "1. Leonardo da Vinci",
-          "2. Michel-Ange",
-          "3. Pablo Picasso",
-          "4. Vincent van Gogh"
-        ],
-        [
-          "1. William Shakespeare",
-          "2. Christopher Marlowe",
-          "3. Thomas Kyd",
-          "4. John Webster"
-        ],
-        [
-          "1. Victor Hugo",
-          "2. Gustave Flaubert",
-          "3. Alexandre Dumas",
-          "4. Emile Zola"
-        ],
-        [
-          "1. Jane Austen",
-          "2. Charlotte Brontë",
-          "3. Emily Brontë",
-          "4. Louisa May Alcott"
-        ],
-        [
-          "1. Edgar Allan Poe",
-          "2. Emily Dickinson",
-          "3. Walt Whitman",
-          "4. Robert Frost"
-        ],
-        [
-          "1. Miguel de Cervantes",
-          "2. Gabriel Garcia Marquez",
-          "3. Jorge Luis Borges",
-          "4. Isabel Allende"
-        ],
-        [
-          "1. Harper Lee",
-          "2. J.K. Rowling",
-          "3. Sylvia Plath",
-          "4. Toni Morrison"
-        ]
+        ["1. Un langage de programmation côté serveur", "2. Un langage de programmation pour la conception graphique", "3. Un langage de programmation pour le développement web côté client", "4. Un langage de balisage"],
+        ["1. 'variable x;'", "2. 'var x;'", "3. 'let x;'", "4. 'const x;'"],
+        ["1. 'let' est utilisé pour les variables dont la valeur ne change pas, 'const' est utilisé pour les variables dont la valeur peut changer, 'var' est obsolète", "2. 'let' est utilisé pour les variables dont la valeur peut changer, 'const' est utilisé pour les variables dont la valeur ne change pas, 'var' est utilisé pour les variables globales", "3. 'let' est utilisé pour les variables globales, 'const' est utilisé pour les variables locales, 'var' est obsolète", "4. Il n'y a pas de différence entre 'let', 'const' et 'var'"],
+        ["1. Une fonction qui utilise des flèches dans sa syntaxe", "2. Une fonction déclarée à l'aide de la syntaxe 'function'", "3. Une fonction qui renvoie une flèche comme résultat", "4. Il n'y a pas de fonction fléchée en JavaScript"],
+        ["1. Un langage de programmation indépendant de la plateforme", "2. Une bibliothèque JavaScript populaire", "3. Une interface de programmation d'application pour les applications mobiles", "4. La représentation d'une page web en tant qu'objet en JavaScript"],
+        ["1. En utilisant la bibliothèque jQuery", "2. En utilisant la méthode 'fetch()'", "3. En utilisant la balise <ajax> dans le code HTML", "4. Il n'est pas possible d'effectuer des requêtes AJAX en JavaScript"],
+        ["1. La portée des variables est définie par les accolades qui entourent le bloc de code dans lequel la variable est déclarée", "2. La portée des variables est définie par le document HTML", "3. La portée des variables est définie par la fonction dans laquelle la variable est déclarée", "4. Il n'y a pas de portée des variables en JavaScript"],
+        ["1. Le hoisting est le processus de déclaration des variables avant leur utilisation dans le code", "2. Le hoisting est le processus de déclaration des variables après leur utilisation dans le code", "3. Le hoisting est une erreur de programmation en JavaScript", "4. Le hoisting est spécifique à la programmation orientée objet en JavaScript"]
       ],
-      "CorrectAnswers": [1, 1, 1, 2, 1, 1, 1, 1]
+      "CorrectAnswers": [3, 3, 1, 1, 4, 2, 1, 1]
     },
     {
-      "Name": "Science",
+      "Name": "React",
       "Questions": [
-        "Quel est le modèle atomique de base ?",
-        "Quelle est la planète la plus proche du soleil ?",
-        "Quel est l'élément chimique le plus abondant dans l'univers ?",
-        "Quelle est la formule chimique de l'eau ?",
-        "Quelle est la plus grande planète du système solaire ?",
-        "Quelle est la première loi de Newton ?",
-        "Quel est l'organe le plus grand du corps humain ?",
-        "Quelle est la vitesse de la lumière dans le vide ?"
+        "Qu'est-ce que React et quels sont ses principaux concepts ?",
+        "Comment crée-t-on un composant fonctionnel en React ?",
+        "Quelle est la différence entre un composant fonctionnel et un composant de classe en React ?",
+        "Qu'est-ce que JSX en React ?",
+        "Comment gère-t-on l'état dans un composant React ?",
+        "Quelle est la différence entre les props et l'état dans React ?",
+        "Qu'est-ce que le cycle de vie d'un composant React ?",
+        "Comment effectue-t-on le rendu conditionnel dans React ?"
       ],
       "Options": [
-        [
-          "1. Modèle de Dalton",
-          "2. Modèle de Rutherford",
-          "3. Modèle de Bohr",
-          "4. Modèle quantique"
-        ],
-        ["1. Mercure", "2. Vénus", "3. Terre", "4. Mars"],
-        ["1. Hydrogène", "2. Hélium", "3. Oxygène", "4. Carbone"],
-        ["1. H2O", "2. CO2", "3. N2", "4. O2"],
-        ["1. Jupiter", "2. Saturne", "3. Uranus", "4. Neptune"],
-        [
-          "1. Loi de la gravitation universelle",
-          "2. Loi de la conservation de l'énergie",
-          "3. Loi de l'inertie",
-          "4. Loi de l'action et de la réaction"
-        ],
-        ["1. Cœur", "2. Foie", "3. Cerveau", "4. Poumons"],
-        [
-          "1. 299,792 kilomètres par seconde",
-          "2. 150,000 kilomètres par seconde",
-          "3. 450,000 kilomètres par seconde",
-          "4. 600,000 kilomètres par seconde"
-        ]
+        ["1. Une bibliothèque JavaScript pour la création d'interfaces utilisateur", "2. Un langage de programmation côté serveur", "3. Une base de données NoSQL", "4. Un framework JavaScript pour les applications mobiles"],
+        ["1. 'function MyComponent() { return <div>Hello World</div>; }'", "2. 'class MyComponent extends Component { render() { return <div>Hello World</div>; }}'", "3. 'const MyComponent = () => <div>Hello World</div>;", "4. 'create MyComponent() { return <div>Hello World</div>; }'"],
+        ["1. Les composants fonctionnels utilisent la syntaxe ES6, tandis que les composants de classe utilisent la syntaxe ES5", "2. Les composants fonctionnels ne peuvent pas avoir d'état, tandis que les composants de classe le peuvent", "3. Les composants fonctionnels ne peuvent pas recevoir de propriétés, tandis que les composants de classe le peuvent", "4. Il n'y a pas de différence entre les composants fonctionnels et les composants de classe"],
+        ["1. Un langage de programmation similaire à JavaScript", "2. Une syntaxe de balisage utilisée pour décrire la structure des composants React", "3. Un langage de requête pour les bases de données", "4. Un format de fichier compressé"],
+        ["1. En utilisant la méthode 'setState()'", "2. En assignant directement la valeur à la propriété 'state'", "3. En utilisant la méthode 'getInitialState()'", "4. Il n'est pas possible de gérer l'état dans un composant React"],
+        ["1. Les props sont utilisées pour la gestion de l'état, tandis que l'état est utilisé pour la transmission de données entre les composants", "2. Les props sont immuables, tandis que l'état est mutable", "3. Les props sont spécifiques à un composant, tandis que l'état est partagé entre tous les composants", "4. Il n'y a pas de différence entre les props et l'état"],
+        ["1. Le cycle de vie d'un composant décrit les différentes phases de sa création, mise à jour et destruction", "2. Le cycle de vie d'un composant se résume à deux phases : création et destruction", "3. Le cycle de vie d'un composant est le même pour tous les types de composants", "4. Il n'y a pas de concept de cycle de vie dans React"],
+        ["1. En utilisant une déclaration 'if' classique", "2. En utilisant la méthode 'renderConditionally()'", "3. En utilisant des opérateurs ternaires", "4. Il n'est pas possible d'effectuer un rendu conditionnel dans React"]
       ],
-      "CorrectAnswers": [3, 1, 1, 1, 1, 3, 4, 1]
+      "CorrectAnswers": [1, 3, 2, 2, 1, 2, 1, 3]
     },
     {
-      "Name": "Histoire",
+      "Name": "C#",
       "Questions": [
-        "En quelle année a eu lieu la Révolution française ?",
-        "Qui était le premier président des États-Unis ?",
-        "Quel événement a marqué le début de la Première Guerre mondiale ?",
-        "Quelle civilisation a construit les pyramides de Gizeh ?",
-        "En quelle année le mur de Berlin est-il tombé ?",
-        "Quelle bataille a mis fin à la Guerre de Cent Ans ?",
-        "Qui était le roi de Grande-Bretagne pendant la Révolution américaine ?",
-        "Quel empire a été le plus vaste de l'histoire ?"
+        "Qu'est-ce que C# et quels sont ses principaux usages ?",
+        "Comment déclare-t-on une variable en C# ?",
+        "Quelle est la différence entre 'int' et 'float' en C# ?",
+        "Qu'est-ce qu'une classe en C# ?",
+        "Comment déclare-t-on une méthode dans une classe C# ?",
+        "Quelle est la différence entre '==', 'Equals()', et 'ReferenceEquals()' en C# pour la comparaison d'objets ?",
+        "Qu'est-ce que l'héritage en programmation orientée objet avec C# ?",
+        "Comment gère-t-on les exceptions en C# ?"
       ],
       "Options": [
-        ["1. 1789", "2. 1804", "3. 1830", "4. 1917"],
-        [
-          "1. Thomas Jefferson",
-          "2. George Washington",
-          "3. John Adams",
-          "4. Abraham Lincoln"
-        ],
-        [
-          "1. L'assassinat de l'archiduc François-Ferdinand",
-          "2. L'attaque de Pearl Harbor",
-          "3. Le traité de Versailles",
-          "4. L'Armistice de 1918"
-        ],
-        ["1. Égyptiens", "2. Grecs", "3. Romains", "4. Mayas"],
-        ["1. 1989", "2. 1991", "3. 1975", "4. 1963"],
-        [
-          "1. Bataille de Castillon",
-          "2. Bataille d'Azincourt",
-          "3. Bataille d'Orléans",
-          "4. Bataille de Crécy"
-        ],
-        [
-          "1. George III",
-          "2. George IV",
-          "3. George Washington",
-          "4. George V"
-        ],
-        [
-          "1. Empire romain",
-          "2. Empire mongol",
-          "3. Empire ottoman",
-          "4. Empire britannique"
-        ]
+        ["1. Un langage de programmation développé par Microsoft pour le développement d'applications Windows", "2. Un langage de balisage pour la création de pages web dynamiques", "3. Un framework JavaScript pour les applications mobiles", "4. Un langage de requête pour les bases de données"],
+        ["1. 'variable x;'", "2. 'var x;'", "3. 'int x;'", "4. 'let x;'"],
+        ["1. 'int' est utilisé pour les nombres entiers, 'float' est utilisé pour les nombres décimaux", "2. 'int' est utilisé pour les nombres décimaux, 'float' est utilisé pour les nombres entiers", "3. Il n'y a pas de différence entre 'int' et 'float'", "4. 'int' et 'float' sont utilisés de manière interchangeable"],
+        ["1. Une fonction en C#", "2. Un type de données en C#", "3. Une structure de contrôle en C#", "4. Un modèle pour créer des objets"],
+        ["1. 'function myMethod() { // code }'", "2. 'void myMethod() { // code }'", "3. 'public method myMethod() { // code }'", "4. 'public void myMethod() { // code }'"],
+        ["1. '==' compare la valeur des objets, 'Equals()' compare la référence mémoire des objets, 'ReferenceEquals()' compare la référence mémoire des objets et prend en compte la possibilité de null", "2. '==' compare la référence mémoire des objets, 'Equals()' compare la valeur des objets, 'ReferenceEquals()' compare la référence mémoire des objets sans prendre en compte la possibilité de null", "3. '==' et 'Equals()' font la même chose, 'ReferenceEquals()' compare la référence mémoire des objets", "4. Il n'y a pas de différence entre '==', 'Equals()', et 'ReferenceEquals()'"],
+        ["1. L'héritage permet à une classe d'inclure les membres d'une autre classe", "2. L'héritage est une méthode pour comparer deux objets", "3. L'héritage est une technique pour gérer les exceptions", "4. Il n'y a pas de concept d'héritage en C#"],
+        ["1. En utilisant une instruction 'if' classique", "2. En utilisant la méthode 'catch'", "3. En utilisant une déclaration 'try-catch'", "4. Il n'est pas possible de gérer les exceptions en C#"]
       ],
-      "CorrectAnswers": [1, 2, 1, 1, 1, 1, 1, 4]
+      "CorrectAnswers": [1, 3, 1, 4, 4, 1, 1, 3]
     }
   ]
 }

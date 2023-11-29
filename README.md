@@ -58,6 +58,26 @@ Ce programme C# est une application de quiz interactive qui permet aux utilisate
 8. **Chargement des quiz à partir d'un fichier JSON** :
    - La méthode `LoadQuizzesFromJson` est responsable du chargement des données à partir du fichier JSON.
 
+## Structure des fichiers
+
+Ce projet de quiz en ligne est organisé en plusieurs fichiers pour faciliter la gestion et la compréhension du code. Voici une description de chaque fichier et de son contenu :
+
+1. `QuizProgram.cs` : Ce fichier contient la classe principale `QuizProgram` qui contient la méthode `Main()`. C'est le point d'entrée du programme où l'exécution commence. Il charge les données du fichier JSON, affiche le menu principal et gère les différentes options choisies par l'utilisateur.
+
+2. `QuizLoader.cs` : Ce fichier contient la classe `QuizLoader` qui est responsable du chargement des données à partir du fichier JSON. La méthode `LoadQuizzesFromJson()` est utilisée pour charger les quiz à partir du fichier JSON et renvoie les données sous forme d'objet `QuizData`.
+
+3. `QuizGame.cs` : Ce fichier contient la classe `QuizGame` qui gère le déroulement du quiz. La méthode `PlayQuiz()` est responsable de l'affichage des questions, des options et des réponses correctes, de la validation des réponses de l'utilisateur et de l'affichage du score final.
+
+4. `QuizData.cs` : Ce fichier contient la classe `QuizData` qui représente les données du quiz. Il a une liste de catégories (`Category`) qui contiennent les questions, les options et les réponses correctes.
+
+5. `Category.cs` : Ce fichier contient la classe `Category` qui représente une catégorie de quiz. Il a un nom, une liste de questions, une liste d'options et une liste de réponses correctes.
+
+6. `quizzes.json` : Ce fichier est un fichier JSON contenant les données des quiz. Il est utilisé par la méthode `LoadQuizzesFromJson()` du fichier `QuizLoader.cs` pour charger les quiz.
+
+7. `ReadMe.md` : Ce fichier est le fichier README principal du projet. Il contient des informations générales sur le projet, des instructions d'installation et d'utilisation, ainsi que des descriptions détaillées des fonctionnalités du programme.
+
+N'hésitez pas à explorer ces fichiers pour mieux comprendre la structure du projet et le fonctionnement du programme de quiz.
+
 ## Comment utiliser le programme
 
 1. Assurez-vous d'avoir un fichier JSON valide (`quizzes.json`) contenant des données de quiz.

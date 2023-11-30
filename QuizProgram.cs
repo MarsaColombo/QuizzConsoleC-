@@ -14,7 +14,13 @@ class QuizProgram
             Console.ReadKey();
             return;
         }
-
+        Console.WriteLine(" ____   _    _  _____  ______ ______ ");
+        Console.WriteLine("/ __ \\ | |  | ||_   _||___  /|___  /");
+        Console.WriteLine("| |  | || |  | |  | |     / /    / / ");
+        Console.WriteLine("| |  | || |  | |  | |    / /    / /");
+        Console.WriteLine("| |__| || |__| | _| |_  / /__  / /__");
+        Console.WriteLine("\\___\\_\\ \\____/ |_____|/_____|/_____|");
+        Console.WriteLine("                                  ");
         Console.WriteLine($"Nombre de catégories chargées : {quizData.Categories.Count}");
 
         Console.WriteLine("Bienvenue dans le programme de quiz !");

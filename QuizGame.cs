@@ -1,9 +1,7 @@
-using System;
 using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
 
-class QuizGame
+
+partial class QuizGame
 {
     private static int userChoice;
 
@@ -90,7 +88,7 @@ class QuizGame
             if (userChoice == 0)
             {
                 Console.WriteLine($"Aucune réponse donnée à temps ! Temps écoulé : {stopwatch.Elapsed.TotalSeconds} secondes");
-                Console.WriteLine("Appuyer entrer pour continuer");
+               
             }
             else
             {
@@ -108,7 +106,6 @@ class QuizGame
                     if (correctIndex >= 0 && correctIndex < options[i].Length)
                     {
                         Console.WriteLine($"\nIncorrect. La réponse correcte était : {options[i][correctIndex]}.");
-                        Console.WriteLine($"\nTemps écoulé : {stopwatch.Elapsed.TotalSeconds} secondes\n");
                     }
                     else
                     {
@@ -125,65 +122,7 @@ class QuizGame
         Console.ReadLine(); // Attendre une entrée utilisateur à la fin du quiz
     }
 
-    private static void StartTimer(int milliseconds, int questionIndex, Stopwatch stopwatch, CancellationToken cancellationToken)
-    {
-        try
-        {
-            Task.Delay(milliseconds, cancellationToken).Wait();
+    
 
-            if (userChoice == 0)
-            {
-                Console.WriteLine($"Temps écoulé pour la question {questionIndex + 1} ! Temps total : {stopwatch.Elapsed.TotalSeconds} secondes");
-                userChoice = -1; // Set a special value to indicate that time has expired
-            }
-        }
-        catch (TaskCanceledException)
-        {
-            // Timer was canceled by user input
-        }
-    }
 
-    private static void GetUserInput(int numberOfOptions, CancellationTokenSource cts)
-    {
-        int choice;
-        bool isInvalidChoice;
-
-        do
-        {
-            if (userChoice == -1)
-            {
-                // Skip user input if the time has expired
-                return;
-            }
-
-            isInvalidChoice = !int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > numberOfOptions;
-
-            if (isInvalidChoice)
-            {
-                Console.WriteLine("Erreur : Veuillez entrer un chiffre entre 1 et 4.");
-            }
-            else
-            {
-                userChoice = choice;
-            }
-        } while (isInvalidChoice && !cts.Token.IsCancellationRequested);
-    }
-
-    public static int GetResponse(int numberOfOptions)
-    {
-        int choice;
-        bool isInvalidChoice;
-
-        do
-        {
-            isInvalidChoice = !int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > numberOfOptions;
-
-            if (isInvalidChoice)
-            {
-                Console.WriteLine("Erreur : Veuillez entrer un chiffre entre 1 et 4.");
-            }
-        } while (isInvalidChoice);
-
-        return choice;
-    }
 }
